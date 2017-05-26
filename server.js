@@ -3,7 +3,7 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-  mongoose.connect(process.env.MONDOB_URI || 'mongodb://localhost/todo-app');
+  mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/todo-app');
 // MIDDLEWARE
 app.use(express.static('public'));
 
