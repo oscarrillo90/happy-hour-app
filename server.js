@@ -2,6 +2,8 @@
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
+  mongoose.connect('mongodb://localhost/todo-app');
 // MIDDLEWARE
 app.use(express.static('public'));
 
