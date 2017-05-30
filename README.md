@@ -20,3 +20,6 @@ User can sign up for a new account using Facebook login, and he/she can log into
 User can rate happy hour 1-5 stars only if user's logged in.
 
 User can see detailed reviews on happy hour page.
+
+Diagram of User flow
+![One Drank logo](http://i.imgur.com/nigPqeO.png)
