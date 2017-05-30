@@ -3,6 +3,9 @@
 
 ![One Drank logo](http://i.imgur.com/TOyqOgN.png)
 
+Craving for happy hour? Want a cheap date? Don't want to go home alone again?
+
+Introducing ONE DRANK - an AWESOME web application that helps people to find the hottest happy hour in town!
 
 Key functions:
 
