@@ -1,12 +1,13 @@
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
+// require ./user
 
 
 //make a model for review
 var ReviewSchema = new Schema({
   // referencing these Object IDS
-  user : String,
+  _user : String, //
   title: String,
   rating: Number,
   date: String,

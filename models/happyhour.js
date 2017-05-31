@@ -13,6 +13,7 @@ var HappyhourSchema = new Schema({
   rating: Number,
   categories: String,
   location: String,
+  review: String
 });
 
 var Happyhour = mongoose.model('Happyhour', HappyhourSchema);

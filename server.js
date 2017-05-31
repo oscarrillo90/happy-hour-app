@@ -20,7 +20,8 @@ app.get('/', function(req, res){
   res.json({message: "IT WORKS!"});
 })
 
-var happyHourController = require('./controllers/happyHourController.js')
+var happyHourController = require('./controllers/happyHourController.js');
+var reviewController = require('./controllers/reviewController.js');
 
 // /search/cocktails
 app.get('/search/:term', happyHourController.search);
@@ -31,6 +32,10 @@ app.get('/results', happyHourController.index);
 
 //get one happy hour
 app.get('/show/:happyhourid', happyHourController.show);
+
+
+//get all reviews
+app.get('/review', reviewController.index);
 
 
 

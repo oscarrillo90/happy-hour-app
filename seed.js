@@ -2153,6 +2153,37 @@ db.happyhour.remove({}, function(err, succ){
 
 });
 
+//for review database
+// var review = [
+//   {
+//     // referencing these Object IDS
+//     userId : "Amy",
+//     title: "Love this happy hour",
+//     rating: 5,
+//     date: "05/31/17",
+//     description: "I wanted to host a large happy hour at the completion of the school year for my colleagues. I reached out to Dom via email and he quickly responded to my query and offered is a sweet happy hour deal. ",
+//   }
+// ]
+//
+// db.review.remove({}, function(err, succ){
+//   if(err){return console.log(err)}
+//
+//   reviews.forEach(function(happyEventReview){
+//
+//     db.review.create( happyEventReview, function(err, succ){
+//
+//       if(err){return console.log(err)}
+//       console.log("succ.name");
+//     });
+//
+//   });
+//
+// });
+
+
+
+
+
 //yelp API route
 // app.get('/search', function(req, res){
 //
