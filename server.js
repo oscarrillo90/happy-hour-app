@@ -3,15 +3,42 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-  mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/todo-app');
+const yelp = require('yelp-fusion');
+var db = require('./models');
+
+app.set('view engine', 'ejs');
+app.engine('ejs', require('ejs').renderFile);
+// app.set('view', path.join(_dirname, 'views'))
+
 // MIDDLEWARE
 app.use(express.static('public'));
+
 
 // ROUTES
 // ... coming soon
 app.get('/', function(req, res){
   res.json({message: "IT WORKS!"});
 })
+
+var happyHourController = require('./controllers/happyHourController.js');
+var reviewController = require('./controllers/reviewController.js');
+
+// /search/cocktails
+app.get('/search/:term', happyHourController.search);
+
+
+// get all happy hours
+app.get('/results', happyHourController.index);
+
+//get one happy hour
+app.get('/show/:happyhourid', happyHourController.show);
+
+
+//get all reviews
+app.get('/review', reviewController.index);
+
+
+
 // SERVER START
 app.listen(process.env.PORT || 3000, function () {
   console.log("HTTP server listening at localhost:3000");
