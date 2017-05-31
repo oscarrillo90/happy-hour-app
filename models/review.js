@@ -7,6 +7,7 @@ var mongoose = require('mongoose'),
 var ReviewSchema = new Schema({
   // referencing these Object IDS
   user : String,
+  title: String,
   rating: Number,
   date: String,
   description: String,
