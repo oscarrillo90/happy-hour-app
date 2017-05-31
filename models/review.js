@@ -1,9 +1,18 @@
+var mongoose = require('mongoose'),
+    Schema = mongoose.Schema;
 
+
+
+//make a model for review
 var ReviewSchema = new Schema({
   // referencing these Object IDS
-  happyHour_id: {type: ObjectId, ref: "happy-hour"}
-  user_id : {type: ObjectId, ref: "user"}
-  review: String,
-  title: String,
-  rating: Number
+  user : String,
+  rating: Number,
+  date: String,
+  description: String,
 });
+
+//EXPORTS STUFF
+
+var Review = mongoose.model('Review', ReviewSchema);
+module.exports = Review;
