@@ -23,15 +23,14 @@ app.get('/', function(req, res){
 var happyHourController = require('./controllers/happyHourController.js')
 
 // /search/cocktails
-app.get('/search/:term', happyHourController.search)
+app.get('/search/:term', happyHourController.search);
 
 
 // get all happy hours
 app.get('/results', happyHourController.index);
 
-
-
-
+//get one happy hour
+app.get('/show/:happyhourid', happyHourController.show);
 
 
 
