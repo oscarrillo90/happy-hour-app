@@ -13,29 +13,45 @@ app.engine('ejs', require('ejs').renderFile);
 // MIDDLEWARE
 app.use(express.static('public'));
 
+
 // ROUTES
 // ... coming soon
 app.get('/', function(req, res){
   res.json({message: "IT WORKS!"});
 })
 
+// /search/cocktails
+app.get('/search/:term', function(req,res){
+
+  db.happyhour.find({term: req.params.term}, function(err, success){
+    console.log(success);
+    //res.render(something, {results: success);
+    res.send("Fill me out!");
+  });
+
+})
+
 
 // get all books
 app.get('/results', function (req, res) {
-  // send all books as JSON response
-  // var allResults = db.happyhour.find();
-  //
-  //   // .exec(function(err, happyhours) {
-  //   //   if (err) {
-  //   //     return console.log("index error: " + err);
-  //   //   }
-  // res.send(allResults);
-  // });
-  // console.log(allResults);
-  console.log('hehehehehheh');
+  //send all books as JSON response
+  db.happyhour.find({}, function(err, succ){
+    if(err){return console.log(err);}
+    console.log(succ.length);
+    res.render('layout', {results: succ});
+
+  });
+
 });
 //yelp API route
 // app.get('/search', function(req, res){
+//
+//
+//
+// var searchRequest = {
+//   term: req.params.term,
+//   location: 'austin, tx'
+// }
 //
 //   var yelp = require('yelp-fusion');
 //
