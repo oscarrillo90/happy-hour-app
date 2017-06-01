@@ -28,9 +28,11 @@
        </div>
 
        <div>
-
-           <a class="btn" href="/auth/facebook">Login with Facebook</a>
-
+            <% if(user != undefined){ %>
+              <a href="/logout">Logout</a>
+            <% } else { %>
+              <a class="btn" href="/auth/facebook">Login with Facebook</a>
+            <% } %>
        </div>
 
      </nav>
