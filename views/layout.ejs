@@ -1,4 +1,72 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
+  <html>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Cabin|Chango|Chelsea+Market|Knewave|Luckiest+Guy|Monoton|Press+Start+2P" rel="stylesheet">
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- jQuery -->
+  <script src="http://code.jquery.com/jquery-2.2.2.min.js"></script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="stylesheets/main.css">
+  <!-- Custom JS -->
+  <script type="text/javascript" src="scripts/app.js"></script>
+
+ <head>
+
+    <title>One Drank</title>
+
+</head>
+
+ <body>
+   <header>
+     <nav class="navbar navbar-inverse navbar-fixed-top">
+       <div class="navbar-header">
+         <ul class="nav navbar-nav pull-left">
+           <li><a href="index.html">Home</a></li>
+       </div>
+       <ul class="nav navbar-nav pull-right">
+         <li><a href="indexSignIn.html">Sign In</a></li>
+         <li><a href="indexSignUp.html">Sign Up</a></li>
+       </ul>
+     </nav>
+   </header>
+    </nav>
+    <section id="logo">
+      <div class="logobox">
+        <img id="drank" src="https://slack-imgs.com/?c=1&url=http%3A%2F%2Fi.imgur.com%2FMRMtzcc.png">
+      </div>
+    </section>
+
+   <section id="container">
+     <div class="searchbox">
+         <form class="form-wrapper cf">
+  	      <input type="text" placeholder="Where do you want to drink?" required>
+	        <button type="submit" class="searchButton"><a href="indexResults.html">Search</a></button>
+        </form>
+      </div>
+    </section>
+
+    <div>
+
+        <a class="btn" href="/auth/facebook">Login with Facebook</a>
+
+    </div>
+  </div>
+
+
+  </body>
+
+
+ </html>
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -6,26 +74,12 @@
   </head>
   <body>
 
-    <!-- facebook login -->
+
      <div class="facebook-login">
        <h1>FACEBOOK LOGIN USING PASSPORT</h1>
-       <div>
-         <% if(user != undefined){ %>
-           <h2>Below is the data sent by facebook</h2>
-           <pre>
-             <%= user.fb %>
-           </pre>
-           <a href="/logout">Logout</a>
-         <% } else { %>
-           <a href="/auth/facebook">Login with Facebook</a>
-         <% } %>
-       </div>
-     </div>
 
-    <!-- render result page -->
-     <div id="results">
-       <% include results.ejs %>
-     </div>
+
+
 
   </body>
-</html>
+</html> --> -->
