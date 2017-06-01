@@ -6,6 +6,18 @@ var mongoose = require('mongoose');
 const yelp = require('yelp-fusion');
 var db = require('./models');
 
+var path = require('path');
+var logger = require('morgan');
+
+//configuring passport
+var passport = require('passport');
+var expressSession = require('express-session');
+// TODO - Why Do we need this key ?
+app.use(expressSession({secret: 'astarterwordtohelpcreatearandomandconsistentencryptionforallsessions'}));
+app.use(passport.initialize());
+app.use(passport.session());
+
+
 app.set('view engine', 'ejs');
 app.engine('ejs', require('ejs').renderFile);
 // app.set('view', path.join(_dirname, 'views'))
@@ -36,6 +48,14 @@ app.get('/show/:happyhourid', happyHourController.show);
 
 //get all reviews
 app.get('/review', reviewController.index);
+
+
+// Route for Facebook login
+app.get('/', function(req, res){
+  res.render('layout', {user: req.user});
+});
+//add the route that will be used to create the request to Facebook:
+app.get('/auth/facebook', passport.authenticate('facebook', { scope: 'email'} ));
 
 
 

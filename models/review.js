@@ -1,5 +1,6 @@
 var mongoose = require('mongoose'),
-    Schema = mongoose.Schema;
+    Schema = mongoose.Schema,
+    User = require('./user.js');
 
 // require ./user
 
@@ -7,11 +8,12 @@ var mongoose = require('mongoose'),
 //make a model for review
 var ReviewSchema = new Schema({
   // referencing these Object IDS
-  _user : String, //
+  _user : String, // ObjectId type
   title: String,
   rating: Number,
   date: String,
   description: String,
+
 });
 
 //EXPORTS STUFF

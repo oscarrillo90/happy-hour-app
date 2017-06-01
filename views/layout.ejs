@@ -6,6 +6,23 @@
   </head>
   <body>
 
+    <!-- facebook login -->
+     <div class="facebook-login">
+       <h1>FACEBOOK LOGIN USING PASSPORT</h1>
+       <div>
+         <% if(user != undefined){ %>
+           <h2>Below is the data sent by facebook</h2>
+           <pre>
+             <%= user.fb %>
+           </pre>
+           <a href="/logout">Logout</a>
+         <% } else { %>
+           <a href="/auth/facebook">Login with Facebook</a>
+         <% } %>
+       </div>
+     </div>
+
+    <!-- render result page -->
      <div id="results">
        <% include results.ejs %>
      </div>
