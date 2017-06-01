@@ -5,7 +5,7 @@ var express = require('express'),
     passport = require("passport")
 
 
-var usersController = require('../controllers/users');
+var userController = require('../controllers/userController');
 
 
 var isAuthenticated = function (req, res, next) {
@@ -15,7 +15,7 @@ var isAuthenticated = function (req, res, next) {
   if (req.isAuthenticated())
     return next();
   // if the user is not authenticated then redirect him to the login page
-  res.redirect('/');
+  res.render('layout');
 }
 
 
@@ -43,12 +43,12 @@ var isAuthenticated = function (req, res, next) {
 
 
 
-router.route('/login/facebook').get( usersController.getLogin);
+router.route('/auth/facebook').get( userController.getLogin);
 
 
-router.route('/login/facebook/callback').get(usersController.getCallback);
+router.route('/auth/facebook/callback').get(userController.getCallback);
 
-router.route('/logout').get(usersController.logout);
+router.route('/logout').get(userController.logout);
 
 
 module.exports = router

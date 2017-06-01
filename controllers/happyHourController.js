@@ -8,20 +8,30 @@ function index(req, res) {
   db.happyhour.find({}, function(err, succ){
     if(err){return console.log(err);}
     console.log(succ.length);
-    res.render('layout', {results: succ});
+    res.render('results', {results: succ});
 
   });
 
 };
 
 //search happy hour by term
-function search(req,res){
 
-  db.happyhour.find({term: req.params.term}, function(err, success){
+
+
+
+
+
+
+
+function search(req,res){
+  console.log("I am looking for ", req.query.term);
+  db.happyhour.find({categories: req.query.term}, function(err, success){
     console.log(success);
+    res.render('search', {results: success});
     //res.render(something, {results: success);
-    res.send("Fill me out!");
+    // res.render('search');
   });
+
 
 };
 
@@ -35,6 +45,7 @@ function show(req, res) {
       res.render('show', {result: succ});
     });
 };
+
 
 
 // export all the module
