@@ -127,15 +127,27 @@ h4 {
   color: white;
 }
 
+
 .yelpimg {
   width: 200px;
   height: 150px;
 }
 
+.searchbox2 {
+  margin: 70px 350px 10px ;
+  position: center;
+
+}
+
+#map {
+  border-radius: 10px;
+}
+
+
 .form-wrapper3 {
     width: 650px;
     padding: 15px;
-    margin-top: 65px;
+    margin-top: 0;
     /*margin: 150px auto 50px auto;*/
     background: #444;
     background: rgba(0,0,0,.2);
