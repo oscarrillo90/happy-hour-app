@@ -24,3 +24,19 @@ User can see detailed reviews on happy hour page.
 Diagram of User flow
 <br>
 ![diagram](http://i.imgur.com/nigPqeO.png)
+
+
+Technology used:
+Node.js
+Express
+RESTful API
+Javascript
+jQuey
+MongoDB
+Git
+Heroku
+Yelp Fusion
+Google API
+PassportJS(Facebook)
+ejs
+CSS

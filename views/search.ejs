@@ -1,0 +1,71 @@
+<<!DOCTYPE html>
+  <html>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Cabin|Chango|Chelsea+Market|Knewave|Luckiest+Guy|Monoton|Press+Start+2P" rel="stylesheet">
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- jQuery -->
+  <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="stylesheets/main.css">
+  <!-- Custom JS -->
+  <script type="text/javascript" src="scripts/app.js"></script>
+
+ <head>
+
+    <title>One Drank</title>
+
+</head>
+
+ <body>
+   <header>
+     <nav class="navbar navbar-inverse navbar-fixed-top">
+       <div class="navbar-header">
+         <ul class="nav navbar-nav pull-left">
+           <li><a href="index.html">Home</a></li>
+       </div>
+
+       <div>
+
+           <a class="btn" href="/auth/facebook">Login with Facebook</a>
+
+       </div>
+
+     </nav>
+   </header>
+
+   <div class="searchbar">
+         <section id="container">
+         <div class="searchbox">
+             <form class="form-wrapper cf">
+      	      <input type="text" name="term" placeholder="Where do you want to drink?" required>
+    	        <button type="submit" class="searchButton"><a href=" #">Search</a></button>
+            </form>
+          </div>
+        </section>
+
+   </div>
+
+  <div class="list-map">
+
+        <div class="list">
+                <div id="results">
+                  <% include  results.ejs %>
+                </div>
+        </div>
+
+        <div class="map">
+
+        </div>
+
+  </div>
+
+
+
+
+  </body>
+
+
+ </html>
