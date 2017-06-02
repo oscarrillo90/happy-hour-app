@@ -1,7 +1,10 @@
 # happy-hour-app
 
 
+
 ![One Drank logo](http://i.imgur.com/TOyqOgN.png)
+
+heroku url: https://onedrank.herokuapp.com/
 
 Craving for happy hour? Want a cheap date? Don't want to go home alone again?
 
