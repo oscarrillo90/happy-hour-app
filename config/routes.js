@@ -18,7 +18,7 @@ var isAuthenticated = function (req, res, next) {
   res.render('layout');
 }
 
-
+// TODO: Remove unused code from your deployments
 // http://127.0.0.1:3000/candies
 // router.route('/candies')
 //

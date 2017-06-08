@@ -7,8 +7,10 @@ var mongoose = require('mongoose'),
 
 //make a model for review
 var ReviewSchema = new Schema({
+  // TODO: Change the dataType of _user to ObectId for referencing.
   // referencing these Object IDS
   _user : String, // ObjectId type
+  // TODO: You should also and _happyhour to reference the happy hour being reviewed
   title: String,
   rating: Number,
   date: String,

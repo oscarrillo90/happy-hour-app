@@ -6,6 +6,7 @@ function index(req, res) {
   //send all happyhours as JSON response
   db.review.find({}, function(err, succ){
     if(err){return console.log(err);}
+    // TODO: remove console logs from production deployments
     console.log(succ.length);
     res.render('review', {results: succ});
 

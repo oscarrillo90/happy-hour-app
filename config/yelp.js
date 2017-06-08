@@ -1,6 +1,6 @@
 
 //'use strict';
-
+// TODO: Good work getting the yelp api up and running! Look into having it run automatically every night to update your database of happy hours
 var yelp = require('yelp-fusion');
 
 // Place holders for Yelp Fusion's OAuth 2.0 credentials. Grab them
