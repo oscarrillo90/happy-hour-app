@@ -7,6 +7,7 @@ function index(req, res) {
   //send all happyhours as JSON response
   db.happyhour.find({}, function(err, succ){
     if(err){return console.log(err);}
+    // TODO: remove console logs from production deployments
     console.log(succ.length);
     res.render('results', {results: succ});
 
@@ -26,8 +27,10 @@ function index(req, res) {
 function search(req,res){
   console.log("I am looking for ", req.query.term);
   db.happyhour.find({categories: req.query.term}, function(err, success){
+    // TODO: remove console logs from production deployments
     console.log(success);
     res.render('search', {results: success});
+    // TODO: remove unused code from production deployments
     //res.render(something, {results: success);
     // res.render('search');
   });

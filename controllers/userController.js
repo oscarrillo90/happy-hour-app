@@ -7,6 +7,7 @@ function getLogin(request, response){
 }
 
 function getCallback(request, response){
+  // TODO: remove console logs from production deployments
   console.log("GOT CALL BACK");
   var callback = passport.authenticate('facebook', {
     successRedirect : '/',
